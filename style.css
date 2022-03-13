@@ -1,0 +1,119 @@
+:root {
+    --text-unhovered-color: color:rgb(78, 78, 78);;
+}
+#header {
+    position: absolute;
+}
+
+#c3698 {
+    color: white;
+    background: rgba(0, 0, 0, 0.7) url('https://cph-hotels.com/images/site/sehenswuerdigkeiten/unesco-welterbe-deutschland.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+#c3698.img {
+    filter: brightness(50%);
+}
+
+#c3701 h2 {
+    font-size: 3rem;
+}
+
+#c3702 p {
+    font-size: 1.5rem;
+}
+
+#page {
+    padding-top: 84px !important;
+}
+/* small top navigation */
+.navbar-user {
+    display: none !important;
+}
+
+#nav-primary {
+    position: fixed;
+    top: 0;
+    display: block;
+    transition: top 0.3s !important;
+}
+
+/* main content */
+#c3718 .container:first-child {
+    max-width: 80%;
+}
+/* side nav */
+
+#c3707 .navbar-nav .nav-link {
+    background-color:rgb(255, 255, 255);
+    color: var(--text-unhovered-color);
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 200ms ease;
+}
+#c3707 .navbar-nav .nav-link:hover {
+    color:rgb(0, 0, 0);
+    background-color:rgb(248, 248, 248);
+}
+#c3707 .nav-link.active {
+    color: white;
+    background: #68B9D3 !important;
+}
+
+#c3707 .navbar-nav .nav-item {
+    box-sizing: border-box;
+}
+
+#c3707 .navbar-nav .nav-link {
+    /* display: inline-block; */
+    position: relative;
+}
+  
+#c3707 .navbar-nav .nav-link:after {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #0087ca;
+transform-origin: bottom right;
+transition: transform 0.25s ease-out;
+}
+
+#c3707 .navbar-nav .nav-link:hover:after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+/* lower side nav */
+#c3734 {
+    margin-top: 25px;
+}
+/* follow icons */
+#c3735 .ce-content {
+    flex-direction: row;
+}
+.icon-wrapper {
+    color: var(--text-unhovered-color);
+    padding: 6px;
+    width: 50px;
+    display: block;
+}
+
+.icon-wrapper:hover {
+    color: var(--text-unhovered-color);
+}
+
+.icon-wrapper i:hover {
+    color: black;
+}
+
+.icon-wrapper::before {
+    content: '' !important;
+}
