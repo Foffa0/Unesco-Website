@@ -176,6 +176,7 @@ transform-origin: bottom left;
   }
   .post-module .thumbnail .date .day {
     font-size: 18px;
+    line-height: 1rem;
   }
   .post-module .thumbnail .date .month {
     font-size: 12px;
@@ -196,6 +197,7 @@ transform-origin: bottom left;
     background: #FFFFFF;
     width: 100%;
     padding: 30px;
+    overflow: hidden;
     -webkti-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -231,82 +233,38 @@ transform-origin: bottom left;
     font-weight: 400;
   }
   .post-module .post-content .description {
-    display: none;
+    display: block;
+    opacity: 0;
     color: #666666;
     font-size: 14px;
     line-height: 1.8em;
+    max-height: 0;
+    transition: all 500ms ease;
   }
-  .post-module .description {
-      height: 0;
-    transition: height 300ms ease;
-  }
-  .post-module .post-content .post-meta {
+
+  .post-module .post-content .post-meta, .post-module .post-content .post-meta a {
+    position: relative;
     margin: 30px 0 0;
     color: #999999;
+    text-decoration: none;
+    background-color: white;
   }
   .post-module .post-content .post-meta .timestamp {
     margin: 0 16px 0 0;
   }
-  .post-module .post-content .post-meta a {
-    color: #999999;
-    text-decoration: none;
-  }
-  .hover .post-content .description {
-    display: block !important;
-    height: auto !important;
-    opacity: 1 !important;
-  }
-  .container {
-    max-width: 800px;
-    min-width: 640px;
-    margin: 0 auto;
-  }
-  .container:before,
-  .container:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  .container .column {
+  
+  .news-cards {
     width: 50%;
     padding: 0 25px;
+    margin-bottom: 25px;
     -webkti-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
   }
-  .container .column .demo-title {
-    margin: 0 0 15px;
-    color: #666666;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .container .info {
-    width: 300px;
-    margin: 50px auto;
-    text-align: center;
-  }
-  .container .info h1 {
-    margin: 0 0 15px;
-    padding: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333333;
-  }
-  .container .info span {
-    color: #666666;
-    font-size: 12px;
-  }
-  .container .info span a {
-    color: #000000;
-    text-decoration: none;
-  }
-  .container .info span .fa {
-    color: #e74c3c;
-  }
 
   .post-module:hover .description{
-      display: block;
-      height: 101px;
+      opacity: 1;
+      max-height: 101px;
   }
+  https://codingartistweb.com/2020/10/responsive-cards-with-css-grid/
