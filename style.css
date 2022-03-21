@@ -269,13 +269,15 @@ transform-origin: bottom left;
 
 
 .news-card {
-  height: 200px;
+  height: min-content;
   width: 80%;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   margin: 50px 0 50px 0;
-  box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.103);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0 5px 1px rgba(0, 0, 0, 0.103);
   border-radius: 5px;
 }
 
@@ -308,6 +310,9 @@ transform-origin: bottom left;
   background-color: #FFFFFF;
   border-radius: 0 5px 5px 0;
 }
+.img-first .card-image {
+  border-radius: 5px 0 0 5px ;
+}
 
 .card-arrow {
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -318,7 +323,7 @@ transform-origin: bottom left;
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 20;
+  left: 0%;
   opacity: 0;
   height: 40px;
   width: 40px;
@@ -345,7 +350,6 @@ transform-origin: bottom left;
   background-size: cover;
   background-image: url("newyork.jpg");
   clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
-  transition: clip-path 200ms ease;
   filter: brightness(100%);
   transition: all 200ms ease;
 }
@@ -363,7 +367,7 @@ transform-origin: bottom left;
 }
 
 .card-description {
-  padding: 15px;
+  padding: 1rem;
 }
 
 .news-card .title {
@@ -394,7 +398,44 @@ transform-origin: bottom left;
   line-height: 1.8em;
   max-height: none;
 }
+.card-meta {
+  margin-bottom: 0;
+}
 .card-meta i{
 padding-left: 4px;
 padding-right: 2px;
+}
+
+@media screen and (max-width: 1000px) {
+  .news-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 96%;
+  }
+
+  .card-image {
+    height: 150px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  .card-image .image,
+  .img-first .card-image .image{
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .news-card:hover .card-image .image,
+  .news-card.img-first:hover .card-image .image {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 85%);
+    filter: brightness(80%);
+  }
+  .news-card:hover .card-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #c3718 .ce-content .container{
+    max-width: 100% !important;
+  }
 }
