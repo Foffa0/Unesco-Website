@@ -1,10 +1,11 @@
 :root {
     --text-unhovered-color: color:rgb(78, 78, 78);;
 }
+/* breadcrumb */
 #header {
     position: absolute;
 }
-
+/* header full page */
 #c3698 {
     color: white;
     background: rgba(0, 0, 0, 0.7) url('https://cph-hotels.com/images/site/sehenswuerdigkeiten/unesco-welterbe-deutschland.jpg');
@@ -119,8 +120,9 @@ transform-origin: bottom left;
 }
 
 
+/* --- cards --- */
 
-
+/* variation 1 */
 .post-module {
   position: relative;
   z-index: 1;
@@ -267,16 +269,18 @@ transform-origin: bottom left;
     max-height: 101px;
 }
 
+/* variation 2 */
 
 .news-card {
   height: min-content;
-  width: 80%;
+  width: 98%;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   margin: 50px 0 50px 0;
   margin-left: auto;
   margin-right: auto;
+  float: left;
   box-shadow: 0px 0 5px 1px rgba(0, 0, 0, 0.103);
   border-radius: 5px;
 }
@@ -406,12 +410,6 @@ padding-left: 7px;
 padding-right: 2px;
 }
 
-@media screen and (max-width: 1300px) {
-  .news-card {
-    width: 98%;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   .news-card {
     flex-direction: column;
@@ -444,4 +442,23 @@ padding-right: 2px;
   #c3718 .ce-content .container{
     max-width: 100% !important;
   }
+}
+
+
+/* more news button */
+
+.more-news-btn {
+  width: 30%;
+  min-width: 130px;
+  padding: 0.3rem 1rem;
+  vertical-align: middle;
+  background: #f1f3f5;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 24px;
+  text-transform: uppercase;
+  transition: background-color .1s cubic-bezier(.36,0,1,1);
+}
+.more-news-btn:hover {
+  background-color: #b8c3cb;
 }
