@@ -1,5 +1,5 @@
 :root {
-    --text-unhovered-color: color:rgb(78, 78, 78);;
+  --text-unhovered-color: color:rgb(78, 78, 78);
 }
 /* breadcrumb */
 #header {
@@ -273,14 +273,11 @@ transform-origin: bottom left;
 
 .news-card {
   height: min-content;
-  width: 98%;
+  min-height: 100px;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  margin: 50px 0 50px 0;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
+  margin: 25px 5px 25px 5px;
   box-shadow: 0px 0 5px 1px rgba(0, 0, 0, 0.103);
   border-radius: 5px;
 }
@@ -415,7 +412,6 @@ padding-right: 2px;
     flex-direction: column;
     flex-wrap: nowrap;
     height: auto;
-    width: 96%;
   }
 
   .card-image {
@@ -451,6 +447,7 @@ padding-right: 2px;
   width: 30%;
   min-width: 130px;
   padding: 0.3rem 1rem;
+  margin-top: 1.5rem;
   vertical-align: middle;
   background: #f1f3f5;
   color: rgb(0, 0, 0);
