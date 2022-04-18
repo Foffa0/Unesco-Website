@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  line-height: 0.8;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: .85rem;
+}
+
+
+.members-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.member {
+    width: 48%;
+    min-width: 400px;
+    height: 250px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.member:hover .stripe {
+    background-color: aqua;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 150px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.image-wrapper img {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-wrapper .class {
+    margin-top: 10px;
+    font-weight: 700;
+    color: rgb(105, 105, 105);
+}
+
+.member-text {
+    flex-grow: 5;
+    flex-shrink: 5;
+    color: rgb(59, 59, 59);
+}
+
+.member-text .stripe {
+    width: 60px;
+    height: 4px;
+    margin-bottom: 30px;
+    background-color: rgb(194, 194, 194);
+    transition: background-color 250ms ease;
+}
+
+.member-text h2 {
+    color: rgb(194, 194, 194);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.member-text .member-role {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: rgb(95, 95, 95);
+}
+
+.member-text .member-description {
+    overflow:hidden;
+    line-height: 2rem;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    margin-inline-end: .5rem;
+}
