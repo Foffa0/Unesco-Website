@@ -32,9 +32,10 @@ p {
 .member {
     width: 48%;
     min-width: 400px;
-    height: 250px;
+    height: 100%;
     flex-grow: 1;
     display: flex;
+    margin-bottom: 1.5rem;
 }
 
 .member:hover .stripe {
@@ -64,6 +65,7 @@ p {
 }
 
 .member-text {
+    position: relative;
     flex-grow: 5;
     flex-shrink: 5;
     color: rgb(59, 59, 59);
@@ -92,13 +94,40 @@ p {
 }
 
 .member-text .member-description {
-    overflow:hidden;
     line-height: 2rem;
     -webkit-box-orient: vertical;
     display: block;
     display: -webkit-box;
     overflow: hidden !important;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
-    margin-inline-end: .5rem;
+    max-height: 20%;
+    cursor: pointer;
+    transition: max-height 0.5s;
+}
+
+.member-text .member-description.reveal {
+    max-height: 100%;
+    transition: max-height 1s ease-in-out;
+}
+
+.member-description .read-more {
+    position: absolute; 
+    bottom: 10; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 50px 0; 
+    background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.read-more i {
+    position: absolute;
+    bottom: 0;
+    color: gray;
+}
+
+.member-description span {
+    font-weight: 600 !important;
+    clear: both;
+    display: inline-block;
+    width: 100%;
 }

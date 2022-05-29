@@ -8,5 +8,14 @@ window.onscroll = function() {
         document.getElementById("nav-primary").style.top = "-88px";
     }
     prevScrollpos = currentScrollPos;
-    //hello there
 }
+window.addEventListener('load', function() {
+const revealBtns = document.querySelectorAll('.member-description');
+
+revealBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        console.log('box clicked');
+        btn.classList.toggle('reveal');
+  });
+});
+});
