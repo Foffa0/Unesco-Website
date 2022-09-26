@@ -13,4 +13,4 @@ https://t3terminal.com/blog/de/typo3-gallery-extensions/
 
 ### Todo
 - Projekte Seite: expandable cards
-- 
+- Über uns Seite: Bilder --> Flipcards (hinten Text)
