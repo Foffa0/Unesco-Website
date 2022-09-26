@@ -9,3 +9,8 @@ Website für die Unesco Gruppe des Hans-Sachs-Gymnasiums
 Change background image on cards programmatically
 https://extensions.typo3.org/extension/backgroundimage
 https://t3terminal.com/blog/de/typo3-gallery-extensions/
+
+
+### Todo
+- Projekte Seite: expandable cards
+- 
