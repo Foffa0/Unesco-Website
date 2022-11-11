@@ -5,7 +5,7 @@ main {
 .postlist {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 3rem;
+    row-gap: 1.5rem;
     padding-block: 1.5rem;
 }
 
@@ -17,9 +17,9 @@ main {
         [row1-start] "image date" 1fr [row1-end]
         [row2-start] "image title" 1fr [row2-end]
         [row3-start] "image tags" 1fr [row3-end]
-        [row4-start] "image description" 5fr [row4-end]
+        [row4-start] "image description" auto [row4-end]
         / min-content 1fr;
-    height: 230px;
+    max-height: 230px;
     margin: 1rem auto;
     /*box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);*/
     margin-bottom: 1.6%;
@@ -142,7 +142,8 @@ main {
         [row4-start] "tags" 1fr [row4-end]
         [row5-start] "description" 5fr [row5-end]
         / 1fr;
-        height: 450px;
+        /*height: 450px;*/
+        max-height: 450px;
     }
     .postlist__featuredimage {
         display: initial;
@@ -150,171 +151,3 @@ main {
         height: 200px;
     }
 }
-
-
-
-/*.postlist__post .postlist__featuredimage::after {
-    transform: skewX(-3deg);
-    content: "";
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-/*
-.postlist__post .postlist__featuredimage {
-    /*position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.2s;
-}*/
-/*
-.postlist__post .details,
-.postlist__post .details ul {
-    margin: auto;
-    padding: 0;
-    list-style: none;
-}
-.postlist__post .details {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    margin: auto;
-    transition: left 0.2s;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-    font-size: 0.9rem;
-}
-.postlist__post .details a {
--webkit-text-decoration: dotted underline;
-        text-decoration: dotted underline;
-}
-.postlist__post .details ul li {
-    display: inline-block;
-}
-.postlist__post .details .author:before {
-    font-family: FontAwesome;
-    margin-right: 10px;
-    content: "";
-}
-.postlist__post .details .date:before {
-    font-family: FontAwesome;
-    margin-right: 10px;
-    content: "";
-}
-.postlist__post .details .tags ul:before {
-    font-family: FontAwesome;
-    content: "";
-    margin-right: 10px;
-}
-.postlist__post .details .tags li {
-margin-right: 2px;
-}
-.postlist__post .details .tags li:first-child {
-margin-left: -4px;
-}*//*
-.postlist__post .postlist__postdescription {
-padding: 1rem;
-background: #fff;
-position: relative;
-z-index: 1;
-}
-
-.postlist__post .postlist__posttitle {
-line-height: 1;
-margin: 0;
-font-size: 1.7rem;
-}
-.postlist__post .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader {
-font-size: 1rem;
-font-weight: 300;
-text-transform: uppercase;
-color: #a2a2a2;
-margin-top: 5px;
-}/*
-.postlist__post .postlist__postdescription .read-more {
-text-align: right;
-}
-.postlist__post .postlist__postdescription .read-more a {
-color: #5ad67d;
-display: inline-block;
-position: relative;
-}
-.postlist__post .postlist__postdescription .read-more a:after {
-content: "";
-font-family: FontAwesome;
-margin-left: -10px;
-opacity: 0;
-vertical-align: middle;
-transition: margin 0.3s, opacity 0.3s;
-}
-.postlist__post .postlist__postdescription .read-more a:hover:after {
-margin-left: 5px;
-opacity: 1;
-}*//*
-.postlist__post p {
-position: relative;
-margin: 1rem 0 0;
-}
-.postlist__post p:first-of-type {
-margin-top: 1.25rem;
-}
-.postlist__post p:first-of-type:before {
-content: "";
-position: absolute;
-height: 5px;
-background: #5ad67d;
-width: 35px;
-top: -0.75rem;
-border-radius: 3px;
-}
-.postlist__post:hover .details {
-left: 0%;
-}
-@media (min-width: 640px) {
-.postlist__post {
-    flex-direction: row;
-    max-width: 700px;
-}
-.postlist__post .postlist__featuredimage {
-    flex-basis: 40%;
-    height: auto;
-}
-.postlist__post .postlist__postdescription {
-    flex-basis: 60%;
-}
-.postlist__post .postlist__postdescription:before {
-    transform: skewX(-3deg);
-    content: "";
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-.postlist__post.alt {
-    flex-direction: row-reverse;
-}
-.postlist__post.alt .postlist__postdescription:before {
-    left: inherit;
-    right: -10px;
-    transform: skew(3deg);
-}
-.postlist__post.alt .details {
-    padding-left: 25px;
-}
-}*/
