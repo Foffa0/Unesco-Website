@@ -55,13 +55,26 @@
     display: inline-block;
 }
 
+.postlist__post .postlist__posttitle a {
+    text-decoration: none;
+}
+
+.postlist__post .postlist__posttitle a:hover {
+    text-decoration: underline;
+}
+
 .postlist__post .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader .postmetagroup__item.postmetagroup__item--published, 
 .postlist__post:first-of-type .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader .postmetagroup__item.postmetagroup__item--published{
-    background-color: rgb(255, 233, 233);
+    background-color: rgb(199, 199, 199);
     border: none;
     padding: 1px;
     padding-inline: .25rem !important;
     border-radius: 16px;
+    text-decoration: none;
+}
+.postlist__post .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader .postmetagroup__item.postmetagroup__item--published a, 
+.postlist__post:first-of-type .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader .postmetagroup__item.postmetagroup__item--published a {
+	text-decoration: none;
 }
 
 .postmetagroup.postmetagroup--simple.postmetagroup--type-listheader a{
