@@ -1,3 +1,13 @@
+.breadcrumb-section {
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+  }
+  
+  .breadcrumb-section * {
+    color: #afafaf;
+  }
+
 #c3843 {
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
 }

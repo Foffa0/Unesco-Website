@@ -1,0 +1,14 @@
+#c4045 {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.breadcrumb-section {
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+  }
+  
+  .breadcrumb-section * {
+    color: #afafaf;
+  }
